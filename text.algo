@@ -1,0 +1,26 @@
+ALGORITHM checkpoint Algo
+VAR
+    k : CHAR
+    ac, aw, av : INTEGER := 0
+BEGIN
+    REPEAT
+        Write ("donnez moi un caractère :");
+        Read(k);
+        
+        ac := ac + 1;
+
+        IF (k = ' ') THEN
+            aw := aw + 1;
+        END_IF
+
+        IF ( k = 'A' OR k = 'E' OR k = 'I' OR k = 'O' OR k = 'U' OR k = 'Y' OR k = 'a' OR 
+        k = 'e' OR k = 'i' OR k = 'o' OR k = 'u' OR k = 'y') THEN
+            av := av + 1;
+        END_IF
+
+    UNTIL (k = '.')
+
+    Write( "le noimbre de caractère est :", ac);
+    Write( "le noimbre de mot est :", aw);
+    Write( "le noimbre de voyelle est :", av);
+END
